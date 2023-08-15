@@ -1,0 +1,58 @@
+/* MyAccount.css */
+
+.my-account {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .user-card {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  .user-card .user-image {
+    width: 50px;
+    height: 50px;
+    border-radius:30px;
+    margin: 10px auto;
+  }
+  
+  .user-card .user-info {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .user-card .user-name {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .user-card .user-email {
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .logout-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #e0e0e0;
+  }
+  

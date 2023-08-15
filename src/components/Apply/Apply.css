@@ -1,0 +1,70 @@
+/* Apply.css */
+
+.apply-container {
+    background: linear-gradient(to bottom, rgb(2, 38, 54), #025858); /* Green to Pink */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 80px auto; /* Increased top and bottom margin */
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .apply-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .apply-label {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+  }
+  
+  .apply-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cbd5e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-radius:20px;
+  }
+  
+  .apply-button {
+    background: linear-gradient(to right, #48bb78, #02ecfc); /* Green to Pink */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .apply-button:hover {
+    background: linear-gradient(to right, #0eef06, #ff04bc); /* Darker Green to Darker Pink */
+  }
+
+  .thank-you {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #48bb78; /* Green */
+    border-radius: 10px;
+  }
+  
+  .thank-you h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .thank-you p {
+    color: white;
+    font-size: 18px;
+  }
+ 
+  

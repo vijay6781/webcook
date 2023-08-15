@@ -1,0 +1,26 @@
+/* Banner.css */
+
+/* Banner container */
+.banner-container {
+    position: relative;
+  }
+  
+  /* Banner text */
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Additional Tailwind CSS styles */
+  @media (min-width: 768px) {
+    .banner-text {
+      font-size: 2rem;
+      left: 2rem;
+    }
+  }
+  
