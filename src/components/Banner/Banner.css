@@ -8,7 +8,7 @@
   /* Banner text */
   .banner-text {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 1rem;
     transform: translateY(-50%);
     color: rgb(7, 246, 250);
