@@ -8,10 +8,10 @@
   /* Banner text */
   .banner-text {
     position: absolute;
-    top: 70%;
+    top: 20%;
     left: 1rem;
     transform: translateY(-50%);
-    color: rgb(1, 29, 42);
+    color: rgb(2, 20, 29);
     font-size: 1.5rem;
     font-weight: bold;
   }
