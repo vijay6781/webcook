@@ -1,18 +1,18 @@
 /* Button.css */
 
 .custom-button {
-    background: linear-gradient(to right, #ff5722, #ffeb3b);
+    background: linear-gradient(to right, #edbe31, #53f5d5);
     color: white;
     font-weight: bold;
     padding: 0.4rem 0.8rem;
-    margin-top: 1rem;
+    margin-top: 1.4rem;
     border: none;
-    border-radius: 0.4rem;
+    border-radius: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s;
   }
   
   .custom-button:hover {
-    background: linear-gradient(to right, #ff4081, #ff9800);
+    background: linear-gradient(to right, #11ed91, #f30909);
   }
   
