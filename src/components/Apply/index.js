@@ -6,7 +6,6 @@ import './Apply.css';
 import { useNavigate } from 'react-router-dom'; 
 import {firebaseConfig} from '../Authentication/firebase.js'
 
-console.log("vk",process.env);
 
 firebase.initializeApp(firebaseConfig);
 

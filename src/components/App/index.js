@@ -11,7 +11,6 @@ import Apply from '../Apply'
 
 
 const App = () => {
-  console.log("vk222",process.env);
   return (
     <Router>
       <Navigation />
