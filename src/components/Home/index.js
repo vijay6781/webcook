@@ -1,7 +1,7 @@
 import React from 'react';
 import DisplayCard from '../Tool/displayCard'; 
 import Banner from '../Banner/Banner.js';
-import bannerImage from '../../Assests/Image/Banner.jpg'
+import bannerImage from '../../Assests/Image/Banner3.jpg'
 
 const Home = () => {
   return (
