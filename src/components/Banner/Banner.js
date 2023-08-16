@@ -1,7 +1,7 @@
 import React from 'react';
 import './Banner.css'; // Import the CSS file for styling
 
-const Banner = ({ imageSrc, text }) => {
+const Banner = ({ imageSrc, text,text1 }) => {
   const bannerStyle = {
     backgroundImage: `url(${imageSrc})`,
     filter: 'brightness(0.7) contrast(1.2) hue-rotate(45deg)', // Apply filters to change the photo color
@@ -15,6 +15,9 @@ const Banner = ({ imageSrc, text }) => {
       {/* Banner text */}
       <div className="banner-text">
         {text}
+      </div>
+      <div className="banner-text1">
+        {text1}
       </div>
     </div>
   );

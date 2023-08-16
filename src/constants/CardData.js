@@ -7,7 +7,7 @@ const cardData = [
   {
     title: '',
     description: '',
-    imageUrl:require('../Assests/Image/Hloan.png')
+    imageUrl:require('../Assests/Image/ploan.jpg')
   },
   {
     title: '',

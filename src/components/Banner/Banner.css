@@ -15,6 +15,15 @@
     font-size: 1.5rem;
     font-weight: bold;
   }
+  .banner-text1{
+    position: absolute;
+    top: 70%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: linear-gradient(to right, #04c8f4, #02ffab);
+    font-size: 1.0rem;
+    font-weight: bold;
+  }
   
   /* Additional Tailwind CSS styles */
   @media (min-width: 768px) {
@@ -22,6 +31,11 @@
       font-size: 2rem;
       left: 2rem;
       top:70%;
+    }
+    .banner-text1 {
+      font-size: 2rem;
+      left: 2rem;
+      top:80%;
     }
   }
   
