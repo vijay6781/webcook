@@ -69,12 +69,12 @@ const Footer = () => {
           </div>
           <div className="mb-4">
             <h6 className="mb-2 font-semibold uppercase ml-3">
-              Manage Yourself
+              ABout Us
             </h6>
             <ul className="list-disc pl-6">
-              <li>Explore self-management tools</li>
-              <li>Enhance well-being and productivity</li>
-              <li>Join our community for support</li>
+              <li>Provides loan fastly</li>
+              <li>minimize interest rate</li>
+              <li>contact us for support</li>
               {/* Add more points */}
             </ul>
           </div>
@@ -83,7 +83,7 @@ const Footer = () => {
               Contact Us
             </h6>
             <ul className="list-disc pl-6">
-              <li><strong>Address:</strong> 1234 Elm Street</li>
+              <li><strong>Address:</strong>Gurugram, India</li>
               <li className="mt-2"><strong className=''>Email:</strong> info@barbieloan.com</li>
             </ul>
           </div>
