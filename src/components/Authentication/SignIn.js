@@ -2,6 +2,7 @@ import React from 'react';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, provider } from '../Authentication/firebase';
 
+
 const Sign_In = () => {
   const handleSignIn = () => {
     signInWithPopup(auth, provider)
