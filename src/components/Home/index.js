@@ -8,7 +8,7 @@ const Home = () => {
     
       
      <div>
-      <Banner imageSrc={bannerImage} text="Easy way to take loan" text1="Fast Loan" />
+      <Banner imageSrc={bannerImage} text="Make Website for your bussiness" text1="with affordable price" />
       <DisplayCard/>
       </div>
       
