@@ -1,28 +1,28 @@
 const cardData = [
   {
-    title: '',
+    title: 'Card title',
     description: '',
     imageUrl: require('../Assests/Image/PriceLow.png'), 
   },
   {
-    title: '',
+    title: 'Card title',
     description: '',
-    imageUrl:require('../Assests/Image/OnlineImage.png')
+    imageUrl:require('../Assests/Image/OnlineImage1.png')
   },
   {
-    title: '',
+    title: 'Card title',
     description: '',
-    imageUrl:require('../Assests/Image/OnlineImage.png')
+    imageUrl:require('../Assests/Image/OnlineImage1.png')
   },
   {
-    title: '',
+    title: 'Card title',
     description: '',
-    imageUrl:require('../Assests/Image/OnlineImage.png')
+    imageUrl:require('../Assests/Image/OnlineImage1.png')
   },
   {
-    title: '',
+    title: ' Card title',
     description: '',
-    imageUrl:require('../Assests/Image/OnlineImage.png')
+    imageUrl:require('../Assests/Image/OnlineImage1.png')
   },
   
   // ... (add more card data objects)

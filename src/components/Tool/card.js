@@ -16,7 +16,7 @@ const Card = ({ title, description, imageUrl }) => {
         </div>
 
         <div className="mt-auto"> {/* Use mt-auto for pushing the button to the bottom */}
-          <div className="mb-2">
+          <div className="ml-11">
             <Button text="Apply" url="/apply" />
           </div>
         </div>
