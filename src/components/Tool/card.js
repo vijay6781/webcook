@@ -8,17 +8,14 @@ const Card = ({ title, description, imageUrl }) => {
   };
 
   return (
-    <div className="card-container" style={cardStyle}>
-      <div className="card-content">
-        <div className="text-center">
-          <div className="font-bold text-xl mb-2 text-white">{title}</div>
+    <div className="card-container relative flex items-center justify-center" style={cardStyle}>
+      <div className="card-content flex flex-col items-center text-center bg-green bg-opacity-75 rounded-lg p-4">
+        <div>
+          <div className="font-bold text-xl text-white mb-2">{title}</div>
           <p className="text-white text-base">{description}</p>
         </div>
-
-        <div className="mt-auto"> {/* Use mt-auto for pushing the button to the bottom */}
-          <div className="ml-12">
-            <Button text="Apply" url="/apply" />
-          </div>
+        <div className="mt-4">
+          <Button text="Apply" url="/apply" />
         </div>
       </div>
     </div>
