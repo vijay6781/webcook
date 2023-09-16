@@ -17,7 +17,7 @@ const cardData = [
   {
     title: 'Make your education website',
     description: 'make your website for your coaching,intitute,etc.',
-    imageUrl:require('../Assests/Image/OnlineImage1.png')
+    imageUrl:require('../Assests/Image/Education.png')
   },
   
   // ... (add more card data objects)

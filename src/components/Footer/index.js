@@ -58,12 +58,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="mb-4">
             <h6 className="mb-2 font-semibold uppercase ml-3">
-              Barbie Loan
+               Okay result
             </h6>
             <ul className="list-disc pl-6">
-              <li>Organize and manage your loans</li>
-              <li>Secure and convenient online services</li>
-              <li>Competitive interest rates</li>
+              <li>Make website for your business at low cost</li>
+              <li>Go youe business online</li>
+              <li>Make your own brand</li>
               {/* Add more points */}
             </ul>
           </div>
@@ -72,9 +72,9 @@ const Footer = () => {
               ABout Us
             </h6>
             <ul className="list-disc pl-6">
-              <li>Provides loan fastly</li>
-              <li>minimize interest rate</li>
-              <li>contact us for support</li>
+              <li>Hassle free process </li>
+              <li>A team which will look your project</li>
+              <li>we provide website for your business at low cost</li>
               {/* Add more points */}
             </ul>
           </div>
@@ -84,7 +84,7 @@ const Footer = () => {
             </h6>
             <ul className="list-disc pl-6">
               <li><strong>Address:</strong>Gurugram, India</li>
-              <li className="mt-2"><strong className=''>Email:</strong> info@barbieloan.com</li>
+              <li className="mt-2"><strong className=''>Email:</strong> info@okayresult.com</li>
             </ul>
           </div>
         </div>
@@ -96,7 +96,7 @@ const Footer = () => {
           className="font-semibold text-neutral-600 dark:text-neutral-400"
           href="#"
         >
-          Barbie Loan
+          Okay Result
         </a>
       </div>
     </footer>
