@@ -8,6 +8,8 @@ import SignIn from '../Authentication/SignIn';
 import SignOut from '../Authentication/SignOut';
 import MyAccount from '../MyAccount/MyAccount';
 import Apply from '../Apply'
+import Chat from '../Chat';
+import SignUpLogout from '../Account'
 
 
 const App = () => {
@@ -22,6 +24,9 @@ const App = () => {
         <Route path="/SignOut" element={<SignOut />} />
         <Route path="/account" element={<MyAccount />} />
         <Route path="/Apply" element={< Apply/>} />
+        <Route path="/chat" element={< Chat/>} />
+        <Route path="/account" element={< SignUpLogout/>} />
+
       </Routes>
       <Footer/>
     </Router>
