@@ -81,7 +81,7 @@ function Apply() {
           </div>
         ) : (
           <>
-            <h2 className="apply-title">Apply-form</h2>
+            <h2 className="apply-title">Get in Touch</h2>
             <label className="apply-label">Name:</label>
             <input
               type="text"
