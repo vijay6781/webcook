@@ -14,7 +14,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   /* Apply gradient background to text */
-  background-image: linear-gradient(to right, #f40404, #f7ff02);
+  background-image: linear-gradient(to right, hsl(309, 97%, 49%), #f7ff02);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent; /* Make text transparent */

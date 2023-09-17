@@ -4,7 +4,7 @@ import './Banner.css'; // Import the CSS file for styling
 const Banner = ({ imageSrc, text,text1 }) => {
   const bannerStyle = {
     backgroundImage: `url(${imageSrc})`,
-    filter: 'brightness(0.7) contrast(1.2) hue-rotate(45deg)', // Apply filters to change the photo color
+    filter: 'brightness(0.7) contrast(1.4) hue-rotate(45deg)', // Apply filters to change the photo color
   };
 
   return (

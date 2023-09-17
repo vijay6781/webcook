@@ -44,7 +44,7 @@ function Apply() {
   const handleApply = async () => {
     try {
       // Create a document in Firestore with the loan application data
-      await firestore.collection('loanApplications').add({
+      await firestore.collection('Webcook').add({
         name,
         mobileNumber,
         // loanAmount: parseFloat(loanAmount),
@@ -108,7 +108,7 @@ function Apply() {
             <input
               type="text"
               value={companyName}
-              placeholder='like: website for my shop'
+              placeholder='eg: website for my shop'
               onChange={(e) => setCompanyName(e.target.value)}
               className="apply-input"
             />

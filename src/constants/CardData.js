@@ -1,17 +1,17 @@
 const cardData = [
   {
     title: 'Make business website',
-    description: 'Make your working business website at low cost',
-    imageUrl:require('../Assests/Image/FirstImage.png')
+    description: 'Make website for your business at low cost',
+    imageUrl:require('../Assests/Image/Business.png')
   },
   {
     title: 'Make shop website ',
     description: 'Make website for your shop',
-    imageUrl:require('../Assests/Image/OnlineImage1.png')
+    imageUrl:require('../Assests/Image/Shop.png')
   },
   {
     title: 'Make blog website',
-    description: 'Make website for your shop',
+    description: 'Make website for your Blog or youtube channel',
     imageUrl:require('../Assests/Image/OnlineImage1.png')
   },
   {
