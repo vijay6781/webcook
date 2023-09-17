@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
+import { FaTrash } from 'react-icons/fa';
 import 'firebase/compat/firestore';
 import { Link } from 'react-router-dom';
 
@@ -59,27 +60,30 @@ const Chat = () => {
           <ul className="mb-4">
             {messages.map((msg) => (
               <li key={msg.id} className="mb-2">
-                <div className="flex items-center">
-                  <img
-                    src={msg.photoURL}
-                    alt={msg.firstName}
-                    className="w-8 h-8 rounded-full mr-2"
-                  />
-                  <span>{msg.text}</span>
-                  {user.uid === msg.userId && (
-                    <button
-                      onClick={() => handleDeleteMessage(msg)}
-                      className="ml-2 text-red-500"
-                    >
-                      Delete
-                    </button>
-                  )}
-                </div>
-                {msg.timestamp && (
-                  <div className="text-right text-xs text-gray-500">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <img
+                      src={msg.photoURL}
+                      alt={msg.firstName}
+                      className="w-8 h-8 rounded-full mr-2"
+                    />
+                    <span className="bg-blue-100 p-2 rounded">{msg.text}</span>
+                    {msg.timestamp && (
+                  <div className="text-right ml-2 text-xs text-gray-500">
                     {new Date(msg.timestamp.toDate()).toLocaleTimeString()}
                   </div>
                 )}
+                  </div>
+                  {user.uid === msg.userId && (
+                     <button
+                     onClick={() => handleDeleteMessage(msg)}
+                     className="ml-2 text-blue-500"
+                   >
+                     <FaTrash />
+                   </button>
+                  )}
+                </div>
+                
               </li>
             ))}
           </ul>
