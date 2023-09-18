@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-import { FaTrash } from 'react-icons/fa';
 import 'firebase/compat/firestore';
+import { FaTrash, FaThumbsUp, FaThumbsDown } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Chat = () => {
@@ -38,6 +38,7 @@ const Chat = () => {
         firstName: user.displayName.split(' ')[0],
         photoURL: user.photoURL,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        likes: [] // Initialize likes array for new messages
       });
       setMessage('');
     }
@@ -50,6 +51,29 @@ const Chat = () => {
       await messagesRef.doc(msg.id).delete();
     } catch (error) {
       console.error('Error deleting message:', error);
+    }
+  };
+
+  const handleLikeMessage = async (msg) => {
+    try {
+      const db = firebase.firestore();
+      const messagesRef = db.collection('messages');
+      const msgDoc = await messagesRef.doc(msg.id).get();
+
+      if (msgDoc.exists) {
+        const likes = msgDoc.data().likes || [];
+        const userHasLiked = likes.includes(user.uid);
+
+        if (userHasLiked) {
+          likes.splice(likes.indexOf(user.uid), 1); // Remove user's like
+        } else {
+          likes.push(user.uid); // Add user's like
+        }
+
+        await messagesRef.doc(msg.id).update({ likes });
+      }
+    } catch (error) {
+      console.error('Error updating likes:', error);
     }
   };
 
@@ -69,21 +93,28 @@ const Chat = () => {
                     />
                     <span className="bg-blue-100 p-2 rounded">{msg.text}</span>
                     {msg.timestamp && (
-                  <div className="text-right ml-2 text-xs text-gray-500">
-                    {new Date(msg.timestamp.toDate()).toLocaleTimeString()}
+                      <div className="text-right ml-2 text-xs text-gray-500">
+                        {new Date(msg.timestamp.toDate()).toLocaleTimeString()}
+                      </div>
+                    )}
                   </div>
-                )}
+                  <div className="flex items-center">
+                    <button
+                      onClick={() => handleLikeMessage(msg)}
+                      className={`mr-2 text-blue-500 ${msg.likes && msg.likes.includes(user.uid) ? 'text-red-500' : ''}`}
+                    >
+                      {msg.likes && msg.likes.includes(user.uid) ? <FaThumbsDown /> : <FaThumbsUp />}
+                    </button>
+                    {user.uid === msg.userId && (
+                      <button
+                        onClick={() => handleDeleteMessage(msg)}
+                        className="text-blue-500"
+                      >
+                        <FaTrash />
+                      </button>
+                    )}
                   </div>
-                  {user.uid === msg.userId && (
-                     <button
-                     onClick={() => handleDeleteMessage(msg)}
-                     className="ml-2 text-blue-500"
-                   >
-                     <FaTrash />
-                   </button>
-                  )}
                 </div>
-                
               </li>
             ))}
           </ul>
