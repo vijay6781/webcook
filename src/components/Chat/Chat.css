@@ -1,7 +1,7 @@
 .chat-container {
     max-width: 30rem;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: #ffffff;
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -16,8 +16,9 @@
   .message-item {
     margin-bottom: 1rem;
     border: 1px solid #ccc;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 0.5rem;
+    position: relative;
   }
   
   .message-content {
@@ -52,6 +53,9 @@
   .message-time {
     font-size: 0.75rem;
     color: #888;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
   }
   
   .message-actions {
@@ -59,11 +63,12 @@
     align-items: center;
   }
   
-  .like-button {
+  .like-button,
+  .delete-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-right: 1rem;
   }
   
@@ -71,20 +76,14 @@
     color: #ff69b4; /* Change color when liked */
   }
   
-  .delete-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 1.25rem;
-  }
-  
   .like-count {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     color: #555;
   }
   
   .message-input {
     display: flex;
+    margin-top: 1rem;
   }
   
   .message-input-field {
@@ -92,6 +91,7 @@
     border: 1px solid #ccc;
     padding: 0.5rem;
     border-radius: 0.25rem 0 0 0.25rem;
+    font-size: 0.875rem;
   }
   
   .send-button {
@@ -101,6 +101,7 @@
     padding: 0.5rem 1rem;
     border-radius: 0 0.25rem 0.25rem 0;
     cursor: pointer;
+    font-size: 0.875rem;
   }
   
   .login-prompt {
@@ -116,5 +117,6 @@
     border-radius: 0.25rem;
     text-decoration: none;
     display: inline-block;
+    font-size: 1rem;
   }
   
