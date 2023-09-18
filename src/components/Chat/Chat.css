@@ -1,0 +1,120 @@
+.chat-container {
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .message-item {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .message-content {
+    margin-bottom: 0.5rem;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .user-avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  
+  .user-name {
+    font-weight: bold;
+  }
+  
+  .message-text {
+    background-color: #f0f8ff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .message-time {
+    font-size: 0.75rem;
+    color: #888;
+  }
+  
+  .message-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .like-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+  }
+  
+  .like-button.liked {
+    color: #ff69b4; /* Change color when liked */
+  }
+  
+  .delete-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+  
+  .like-count {
+    font-size: 0.875rem;
+    color: #555;
+  }
+  
+  .message-input {
+    display: flex;
+  }
+  
+  .message-input-field {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 0.25rem 0 0 0.25rem;
+  }
+  
+  .send-button {
+    background-color: #007bff;
+    border: none;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0.25rem 0.25rem 0;
+    cursor: pointer;
+  }
+  
+  .login-prompt {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .login-button {
+    background-color: #007bff;
+    border: none;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
