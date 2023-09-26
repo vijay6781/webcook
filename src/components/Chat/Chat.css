@@ -86,13 +86,18 @@
     margin-top: 1rem;
   }
   
-  .message-input-field {
-    flex-grow: 1;
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    border-radius: 0.25rem 0 0 0.25rem;
-    font-size: 0.875rem;
-  }
+ .message-input-field {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+  font-size: 0.875rem;
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 2rem; /* Set a minimum height */
+  max-height: 10rem; /* Set a maximum height */
+  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+}
+
   
   .send-button {
     background-color: #007bff;

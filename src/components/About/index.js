@@ -6,7 +6,6 @@ function About() {
   return (
     <>
     <h1>About</h1>
-    <h2>{abc}</h2>
     <h1>{localStorage.getItem('name')}</h1>
     </>
   )

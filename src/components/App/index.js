@@ -10,6 +10,8 @@ import MyAccount from '../MyAccount/MyAccount';
 import Apply from '../Apply'
 import Chat from '../Chat';
 import SignUpLogout from '../Account'
+import ChatSupport from '../ChatSupport';
+import AmazonPrimePromotion from '../Blog';
 
 
 const App = () => {
@@ -26,8 +28,11 @@ const App = () => {
         <Route path="/Apply" element={< Apply/>} />
         <Route path="/chat" element={< Chat/>} />
         <Route path="/account" element={< SignUpLogout/>} />
+        <Route path="/blog" element={< AmazonPrimePromotion/>} />
+        
 
       </Routes>
+      <ChatSupport/>
       <Footer/>
     </Router>
   );
