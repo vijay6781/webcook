@@ -12,6 +12,7 @@ import Chat from '../Chat';
 import SignUpLogout from '../Account'
 import ChatSupport from '../ChatSupport';
 import AmazonPrimePromotion from '../Blog';
+import EmotionalStory from '../Help';
 
 
 const App = () => {
@@ -29,6 +30,9 @@ const App = () => {
         <Route path="/chat" element={< Chat/>} />
         <Route path="/account" element={< SignUpLogout/>} />
         <Route path="/blog" element={< AmazonPrimePromotion/>} />
+        <Route path="/story" element={<EmotionalStory />} />
+
+        
         
 
       </Routes>
