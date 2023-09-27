@@ -33,7 +33,7 @@ const EmotionalStory = () => {
         <p className="mb-2">
           To cherish your own symphony of memories, consider exploring beautifully crafted musical instruments on Amazon through this{' '}
           <a href="https://amzn.to/3riUG1C" target="_blank" rel="noopener noreferrer" className="text-blue-500 font-bold">
-            Amazon Affiliate Link
+             Amazon sale going to start
           </a>.
         </p>
       </div>
