@@ -1,73 +1,80 @@
+/* ChatSupport.css */
 .chat-support {
   position: fixed;
-  bottom: 2rem;
-  right: -30rem;
-  transition: right 0.3s;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+.messages {
+  max-height: 150px;
+  overflow-y: auto;
 }
 
-.chat-support.open {
-  right: 2rem;
+.message {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 8px;
 }
-
 .chat-support-button {
-  background-color: #007bff;
+  background-image: linear-gradient(to right, #48cae4, #0096c7);
+  color: #fff;
+  padding: 8px 16px;
   border: none;
-  color: #ffffff;
-  padding: 1rem;
-  border-radius: 50%;
-  font-size: 1.5rem;
+  border-radius: 4px;
   cursor: pointer;
-  margin-bottom: 1rem;
-  display: block;
-  width: 100%;
+  font-size: 16px;
+  margin-right: 8px;
 }
 
 .chat-support-content {
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 1rem;
-  max-width: 300px;
-  position: relative;
+  display: none;
+}
+
+.chat-support.open .chat-support-content {
+  display: block;
 }
 
 .chat-support-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
   background: none;
   border: none;
+  font-size: 20px;
   cursor: pointer;
 }
 
 .chat-support-inner {
+  padding: 16px;
   text-align: center;
+}
+
+.chat-support h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
 }
 
 .chat-support-input {
-  margin-bottom: 1rem;
-  padding: 0.5rem;
   width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
   border: 1px solid #ccc;
-  border-radius: 0.25rem;
-  font-size: 1rem;
+  border-radius: 4px;
 }
 
 .chat-support-submit {
-  background-color: #007bff;
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 16px;
   border: none;
-  color: #ffffff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 1rem;
-  width: 100%;
-  display: block;
+  font-size: 16px;
 }
 
-.chat-support-thank-you {
-  font-size: 1rem;
-  color: #007bff;
-  text-align: center;
+.chat-support-submit:hover {
+  background-color: #2980b9;
 }

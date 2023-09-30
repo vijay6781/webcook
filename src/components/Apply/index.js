@@ -94,6 +94,7 @@ function Apply() {
             <input
               type="tel"
               value={mobileNumber}
+              required
               onChange={(e) => setMobileNumber(e.target.value)}
               className="apply-input"
             />

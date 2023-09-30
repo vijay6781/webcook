@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../Home';
 import About from '../About';
 import Footer from '../Footer';
-import SignIn from '../Authentication/SignIn';
+// import SignIn from '../Authentication/SignIn';
 import SignOut from '../Authentication/SignOut';
 import MyAccount from '../MyAccount/MyAccount';
 import Apply from '../Apply'
@@ -16,7 +16,7 @@ import EmotionalStory from '../Help';
 import PrivacyPolicy from '../Policy';
 import TermsAndConditions from '../Term';
 import RefundPolicy from '../Refund';
-
+import SignIn from '../Authentication/GoogleAuth';
 
 const App = () => {
   return (
@@ -37,6 +37,8 @@ const App = () => {
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/termconditions" element={<TermsAndConditions />} />
         <Route path="/refund" element={<RefundPolicy />} />
+        <Route path="/signin" element={<signin />} />
+
 
 
 
