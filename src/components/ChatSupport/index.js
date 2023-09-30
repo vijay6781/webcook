@@ -1,3 +1,4 @@
+/* ChatSupport.js */
 import React, { useState, useEffect } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
@@ -13,7 +14,6 @@ const ChatSupport = () => {
 
   const db = firebase.firestore();
   const usersRef = db.collection('users');
-  const messagesRef = db.collection('messages');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -30,14 +30,7 @@ const ChatSupport = () => {
   const handleMessageSubmit = async (e) => {
     e.preventDefault();
     if (!message) return;
-
-    const userMessages = messages.filter(msg => msg.name === 'chatsupport');
-    if (userMessages.length >= 10) {
-      alert('You have reached the message limit for this session.');
-      return;
-    }
-
-    await messagesRef.add({
+    await db.collection('messages').add({
       name,
       message,
       timestamp: new Date(),
@@ -58,29 +51,30 @@ const ChatSupport = () => {
 
   return (
     <div className={`chat-support ${isOpen ? 'open' : ''}`}>
-      {!isOpen && !name && (
-        <button
-          className="chat-support-button bg-gradient-to-r from-cyan-400 to-light-blue-500"
-          onClick={() => setIsOpen(true)}
-        >
-          Chat Support
-        </button>
-      )}
       <div className="chat-support-content">
         <button className="chat-support-close" onClick={() => setIsOpen(false)}>
           &#10005;
         </button>
         <div className="chat-support-inner">
           <h2>Chat Support</h2>
-          <div className="messages">
-            {messages.map((msg, index) => (
-              <div
-                key={index}
-                className={`message ${msg.name === 'User' ? 'sent' : 'received'}`}
-              >
-                <div className="message-content">{msg.message}</div>
-              </div>
-            ))}
+          <div className="messages" style={{ flexDirection: 'column-reverse' }}>
+            {messages.map((msg, index) => {
+              if (msg.name === name) {
+                return (
+                  <div key={index} className="message sent">
+                    <div className="message-content">{msg.message}</div>
+                  </div>
+                );
+              } else if (msg.name === 'Chat Bot') {
+                return (
+                  <div key={index} className="message received">
+                    <div className="message-content">{msg.message}</div>
+                  </div>
+                );
+              } else {
+                return null;
+              }
+            })}
           </div>
           {isOpen && !name && (
             <form onSubmit={handleSubmit}>
