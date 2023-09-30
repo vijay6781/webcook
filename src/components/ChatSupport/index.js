@@ -43,6 +43,7 @@ const ChatSupport = () => {
       return;
     }
 
+    
     await messagesRef.add({
       name,
       message,
