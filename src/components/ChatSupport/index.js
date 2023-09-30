@@ -17,7 +17,10 @@ const ChatSupport = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!name || !mobile) return;
+    if (!name || !mobile) {
+      alert('Please provide both your name and mobile number.');
+      return;
+    }
     await usersRef.add({
       name,
       mobile,
@@ -29,7 +32,10 @@ const ChatSupport = () => {
 
   const handleMessageSubmit = async (e) => {
     e.preventDefault();
-    if (!message) return;
+    if (!message) {
+      alert('Please enter a message before sending.');
+      return;
+    }
 
     const userMessages = messages.filter(msg => msg.name === name);
     if (userMessages.length >= 10) {
@@ -47,14 +53,15 @@ const ChatSupport = () => {
 
   useEffect(() => {
     const unsubscribe = db.collection('messages').orderBy('timestamp').onSnapshot((snapshot) => {
-      const newMessages = snapshot.docs.map((doc) => ({
+      let newMessages = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
+      newMessages= newMessages.filter((item)=>item.name===name);
       setMessages(newMessages);
     });
     return () => unsubscribe();
-  }, [db]);
+  }, [db, name]);
 
   return (
     <div className={`chat-support ${isOpen ? 'open' : ''}`}>
@@ -88,6 +95,7 @@ const ChatSupport = () => {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                onClick={(e) => e.stopPropagation()} // Prevent input on click
                 placeholder="Your Name"
                 required
                 className="chat-support-input"
