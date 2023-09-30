@@ -92,6 +92,14 @@ const ChatSupport = () => {
           {isOpen && !name && (
             <form onSubmit={handleSubmit}>
               <input
+                type="tel"
+                value={mobile}
+                onChange={(e) => setMobile(e.target.value)}
+                placeholder="Your Mobile Number"
+                required
+                className="chat-support-input"
+              />
+              <input
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -100,14 +108,7 @@ const ChatSupport = () => {
                 required
                 className="chat-support-input"
               />
-              <input
-                type="tel"
-                value={mobile}
-                onChange={(e) => setMobile(e.target.value)}
-                placeholder="Your Mobile Number"
-                required
-                className="chat-support-input"
-              />
+              
               <button type="submit" className="chat-support-submit">
                 Submit
               </button>
