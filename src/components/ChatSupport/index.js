@@ -46,6 +46,7 @@ const ChatSupport = () => {
     await messagesRef.add({
       name,
       message,
+      mobile,
       timestamp: new Date(),
     });
     setMessage('');
