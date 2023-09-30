@@ -10,14 +10,14 @@ const ChatSupport = () => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [hasSentWelcomeMessage, setHasSentWelcomeMessage] = useState(false);
 
   const db = firebase.firestore();
   const usersRef = db.collection('users');
+  const messagesRef = db.collection('messages');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!name || !mobile) return; 
+    if (!name || !mobile) return;
     await usersRef.add({
       name,
       mobile,
@@ -29,24 +29,20 @@ const ChatSupport = () => {
 
   const handleMessageSubmit = async (e) => {
     e.preventDefault();
-    if (!message) return; 
-    await db.collection('messages').add({
-      name, 
+    if (!message) return;
+
+    const userMessages = messages.filter(msg => msg.name === 'chatsupport');
+    if (userMessages.length >= 10) {
+      alert('You have reached the message limit for this session.');
+      return;
+    }
+
+    await messagesRef.add({
+      name,
       message,
       timestamp: new Date(),
     });
     setMessage('');
-    if (!hasSentWelcomeMessage) {
-      sendConnectMessage();
-      setHasSentWelcomeMessage(true);
-    }
-  };
-
-  const sendConnectMessage = () => {
-    setMessages([
-      ...messages,
-      { message: "I will connect you shortly", name: "Chat Bot" },
-    ]);
   };
 
   useEffect(() => {
