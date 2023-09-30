@@ -31,7 +31,7 @@ const ChatSupport = () => {
     e.preventDefault();
     if (!message) return;
 
-    const userMessages = messages.filter(msg => msg.name === '');
+    const userMessages = messages.filter(msg => msg.name === name);
     if (userMessages.length >= 10) {
       alert('You have reached the message limit for this session.');
       return;
@@ -46,7 +46,7 @@ const ChatSupport = () => {
   };
 
   useEffect(() => {
-    const unsubscribe = db.collection('messages').where('name', '==', name).orderBy('timestamp').onSnapshot((snapshot) => {
+    const unsubscribe = db.collection('messages').orderBy('timestamp').onSnapshot((snapshot) => {
       const newMessages = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
