@@ -98,6 +98,10 @@ const Footer = () => {
         >
           Okay Result
         </a>
+        <div className="mt-2">
+    <a href="/terms-and-conditions" className="text-blue-500 hover:text-blue-700 mx-2">Terms and Conditions</a>
+    <a href="/privacy-policy" className="text-blue-500 hover:text-blue-700 mx-2">Privacy Policy</a>
+  </div>
       </div>
     </footer>
   );

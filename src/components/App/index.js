@@ -13,6 +13,9 @@ import SignUpLogout from '../Account'
 import ChatSupport from '../ChatSupport';
 import AmazonPrimePromotion from '../Blog';
 import EmotionalStory from '../Help';
+import PrivacyPolicy from '../Policy';
+import TermsAndConditions from '../Term';
+import RefundPolicy from '../Refund';
 
 
 const App = () => {
@@ -31,6 +34,13 @@ const App = () => {
         <Route path="/account" element={< SignUpLogout/>} />
         <Route path="/blog" element={< AmazonPrimePromotion/>} />
         <Route path="/story" element={<EmotionalStory />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/termconditions" element={<TermsAndConditions />} />
+        <Route path="/refund" element={<RefundPolicy />} />
+
+
+
+        
 
         
         
