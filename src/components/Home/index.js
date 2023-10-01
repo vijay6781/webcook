@@ -3,7 +3,6 @@ import DisplayCard from '../Tool/displayCard';
 import Banner from '../Banner/Banner.js';
 import bannerImage from '../../Assests/Image/Banner3.jpg'
 import Card from '../Card';
-import ChatSupport from '../ChatSupport';
 
 const Home = () => {
   return (
