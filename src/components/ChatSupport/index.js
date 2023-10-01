@@ -10,6 +10,7 @@ const ChatSupport = () => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [detailsSubmitted, setDetailsSubmitted] = useState(false);
 
   const db = firebase.firestore();
   const usersRef = db.collection('users');
@@ -28,6 +29,7 @@ const ChatSupport = () => {
     setName('');
     setMobile('');
     setIsOpen(true);
+    setDetailsSubmitted(true); // Set flag to indicate details are submitted
   };
 
   const handleMessageSubmit = async (e) => {
@@ -43,7 +45,6 @@ const ChatSupport = () => {
       return;
     }
 
-    
     await messagesRef.add({
       name,
       message,
@@ -67,7 +68,7 @@ const ChatSupport = () => {
 
   return (
     <div className={`chat-support ${isOpen ? 'open' : ''}`}>
-      {!isOpen && !name && (
+      {!isOpen && !detailsSubmitted && (
         <button
           className="chat-support-button bg-gradient-to-r from-cyan-400 to-light-blue-500"
           onClick={() => setIsOpen(true)}
@@ -91,7 +92,7 @@ const ChatSupport = () => {
               </div>
             ))}
           </div>
-          {isOpen && !name && (
+          {isOpen && !detailsSubmitted && (
             <form onSubmit={handleSubmit}>
               <input
                 type="tel"
@@ -110,13 +111,12 @@ const ChatSupport = () => {
                 required
                 className="chat-support-input"
               />
-              
               <button type="submit" className="chat-support-submit">
                 Submit
               </button>
             </form>
           )}
-          {isOpen && name && (
+          {isOpen && detailsSubmitted && (
             <form onSubmit={handleMessageSubmit}>
               <input
                 type="text"
