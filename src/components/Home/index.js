@@ -5,6 +5,7 @@ import bannerImage from '../../Assests/Image/Banner3.jpg'
 import Card from '../Card';
 import CardList from '../Mycard';
 import WhyChooseOkayResult from '../Why';
+import FAQSection from '../Faq';
 const Home = () => {
   return (
     
@@ -15,6 +16,7 @@ const Home = () => {
       {/* <DisplayCard/> */}
       <Card/>
       <WhyChooseOkayResult/>
+      <FAQSection/>
       
       
       </div>

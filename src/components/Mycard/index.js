@@ -7,26 +7,25 @@ const Card = ({ title, description, icon }) => {
 
     const handleApplyClick = () => {
         navigate('/apply');
-        // Write your apply button click logic here
     };
 
     const renderIcon = () => {
         switch (icon) {
             case 'business':
-                return <FaBriefcase className="text-3xl text-teal-200 absolute top-5 right-5" />;
+                return <FaBriefcase className="text-3xl text-teal-400 absolute top-5 right-5" />;
             case 'shop':
-                return <FaStore className="text-4xl text-green-200 absolute top-5 right-5" />;
+                return <FaStore className="text-4xl text-green-400 absolute top-5 right-5" />;
             case 'ecommerce':
-                return <FaShoppingCart className="text-3xl text-teal-200 absolute top-5 right-5" />;
+                return <FaShoppingCart className="text-3xl text-teal-400 absolute top-5 right-5" />;
             case 'personal':
-                return <FaUser className="text-3xl text-teal-200 absolute top-5 right-5" />;
+                return <FaUser className="text-3xl text-teal-400 absolute top-5 right-5" />;
             default:
                 return null;
         }
     };
 
     return (
-        <div className="max-w-sm w-80 mx-auto bg-white shadow-lg rounded-2xl mt-3 overflow-hidden mb-3 text-center">
+        <div className="max-w-sm w-80 mx-auto bg-white shadow-lg rounded-2xl mt-3 overflow-hidden mb-3 text-center transition-transform transform hover:scale-105">
             <div className="px-6 py-4 relative">
                 {renderIcon()}
                 <div className="mb-4">
@@ -36,7 +35,7 @@ const Card = ({ title, description, icon }) => {
             </div>
             <div className="px-6 py-4 flex justify-center">
                 <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                    className="bg-blue-600 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full"
                     onClick={handleApplyClick}
                 >
                     Apply
