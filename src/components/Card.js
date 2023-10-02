@@ -6,7 +6,7 @@ const Card = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center items-center h-auto bg-gradient-to-r mt-1 mb-1 from-pink-500 to-yellow-500">
       {/* Standard Card */}
-      <div className="w-full md:w-1/2 p-4 text-center">
+      <div className="w-full md:w-1/2 p-4 text-center  transition-transform transform hover:scale-105">
         <div className="bg-white rounded-lg p-6 shadow-md">
           <FaRegLightbulb className="text-6xl text-pink-800 mb-4 mx-auto" />
           <h2 className="text-2xl font-bold mb-4 text-pink-800">Creative Solutions</h2>
@@ -18,7 +18,7 @@ const Card = () => {
       </div>
 
       {/* Advance Card */}
-      <div className="w-full md:w-1/2 p-4 text-center mt-4 md:mt-0">
+      <div className="w-full md:w-1/2 p-4 text-center mt-4 md:mt-0  transition-transform transform hover:scale-105">
         <div className="bg-white rounded-lg p-6 shadow-md">
           <FaTools className="text-6xl text-pink-800 mb-4 mx-auto" />
           <h2 className="text-2xl font-bold mb-4 text-pink-800">Advanced Tools</h2>
