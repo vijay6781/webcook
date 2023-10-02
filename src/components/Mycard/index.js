@@ -18,7 +18,7 @@ const Card = ({ title, description, icon }) => {
             case 'ecommerce':
                 return <FaShoppingCart className="text-3xl text-teal-400 absolute top-5 right-5" />;
             case 'personal':
-                return <FaUser className="text-3xl text-teal-400 absolute top-5 right-5" />;
+                return <FaUser className="text-3xl text-pink-400 absolute top-5 right-5" />;
             default:
                 return null;
         }
