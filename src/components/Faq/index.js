@@ -23,7 +23,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-gray-400 mt-1 mb-1 via-gary-500 to-gray-500 text-white p-8 text-center relative">
+    <div className="bg-gradient-to-r from-gray-500 mt-1 mb-1 via-gray-500 to-cyan-500 text-white p-8 text-center relative">
       <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
       <div className="mt-8 text-left">
         {faqs.map((item, index) => (

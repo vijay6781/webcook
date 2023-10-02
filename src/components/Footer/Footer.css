@@ -1,41 +1,14 @@
-/* Footer.css */
+/* styles.css */
 
-.footer {
+.made-in-india {
   display: flex;
-  justify-content: space-between;
+  color: white;
   align-items: center;
-  padding: 2rem;
-  background: linear-gradient(to bottom, #00bfff, #000);
-  color: #fff;
+  color: #666;
 }
 
-.footer-column {
-  flex: 1;
-  margin: 0 1rem;
-  margin-bottom: 0; /* Set bottom margin to zero */
-}
-
-.footer-column h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.footer-column p,
-.footer-column ul {
-  margin-bottom: 1rem;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-column ul li a:hover {
-  color: #00bfff;
+.flag-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
 }

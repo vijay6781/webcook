@@ -1,4 +1,5 @@
 import React from 'react';
+import './Footer.css'
 
 const Footer = () => {
   return (
@@ -103,6 +104,10 @@ const Footer = () => {
     <a href="/privacypolicy" className="text-blue-500 hover:text-blue-700 mx-2">Privacy Policy</a>
   </div>
       </div>
+      <div className="flex items-center justify-center space-x-2">
+      <span className="text-sm ">Built with love, made in India</span>
+    <img src={require('../../Assests/Image/Iflag.png')} alt="Indian Flag" className="h-3 w-3" />
+  </div>
     </footer>
   );
 };
