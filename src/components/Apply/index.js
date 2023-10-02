@@ -22,6 +22,7 @@ function Apply() {
   const navigate = useNavigate(); // Get the history object from React Router
   const [selectedCountry, setSelectedCountry] = useState('');
   const [filteredCountries, setFilteredCountries] = useState([]);
+  const [mobileError, setMobileError] = useState('');
 
   const handleCountryChange = (input) => {
     const inputValue = input.toLowerCase();
@@ -43,15 +44,19 @@ function Apply() {
 
   const handleApply = async () => {
     try {
+      if (!mobileNumber) {
+        setMobileError('Please fill in the Mobile Number');
+        return;
+      }
       // Create a document in Firestore with the loan application data
-      await firestore.collection('Webcook').add({
+      await firestore.collection('website').add({
         name,
         mobileNumber,
         // loanAmount: parseFloat(loanAmount),
         companyName,
         email,
         selectedCountry,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        Date: firebase.firestore.FieldValue.serverTimestamp(),
       });
 
       setSubmitted(true); // Mark form as submitted
@@ -98,6 +103,7 @@ function Apply() {
               onChange={(e) => setMobileNumber(e.target.value)}
               className="apply-input"
             />
+            {mobileError && <div className="error-message">{mobileError}</div>}
             {/* <label className="apply-label">Loan Amount:</label>
             <input
               type="number"

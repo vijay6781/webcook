@@ -1,7 +1,7 @@
 /* Apply.css */
 
 .apply-container {
-    background: linear-gradient(to bottom, rgb(2, 38, 54), #025858); /* Green to Pink */
+    background: linear-gradient(to bottom, rgb(71, 183, 231), #043c45); /* Green to Pink */
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -34,7 +34,7 @@
   }
   
   .apply-button {
-    background: linear-gradient(to right, #48bb78, #02ecfc); /* Green to Pink */
+    background: linear-gradient(to right, #524dee, #3275e1); /* Green to Pink */
     color: white;
     border: none;
     border-radius: 5px;
@@ -45,7 +45,7 @@
   }
   
   .apply-button:hover {
-    background: linear-gradient(to right, #0eef06, #ff04bc); /* Darker Green to Darker Pink */
+    background: linear-gradient(to right, #0eef06, #19ff04); /* Darker Green to Darker Pink */
   }
 
   .thank-you {
@@ -67,4 +67,9 @@
     font-size: 18px;
   }
  
+  .error-message {
+    color: #e53e3e;
+    font-size: 14px;
+    margin-top: 5px;
+  }
   
