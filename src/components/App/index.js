@@ -10,7 +10,6 @@ import MyAccount from '../MyAccount/MyAccount';
 import Apply from '../Apply'
 import Chat from '../Chat';
 import SignUpLogout from '../Account'
-import ChatSupport from '../ChatSupport';
 import AmazonPrimePromotion from '../Blog';
 import EmotionalStory from '../Help';
 import PrivacyPolicy from '../Policy';
@@ -38,17 +37,9 @@ const App = () => {
         <Route path="/termconditions" element={<TermsAndConditions />} />
         <Route path="/refund" element={<RefundPolicy />} />
         <Route path="/signin" element={<signin />} />
-
-
-
-
-        
-
-        
         
 
       </Routes>
-      <ChatSupport/>
       <Footer/>
     </Router>
   );

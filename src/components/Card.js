@@ -7,29 +7,28 @@ const Card = () => {
       {/* Standard Card */}
       <div className="w-full md:w-1/2 p-6 text-center">
         <div className="bg-white rounded-lg p-6 shadow-md">
-          <h2 className="text-2xl font-bold mb-4">Standard Plan</h2>
-          <ul className="text-gray-600">
-            <li className="mb-2">Get Your Business website at affordable price</li>
-            <li className="mb-2">You will get webite related to your business</li>
-            <li className="mb-2">Go your Business online</li>
-            <li className="mb-2">24x7 customer care Service</li>
+          <h2 className="text-3xl font-bold mb-4 text-pink-800">Standard Plan</h2>
+          <ul className="text-gray-700 mb-6">
+            <li className="mb-2">Get a stunning business website at an affordable price</li>
+            <li className="mb-2">Tailored to suit your specific business needs</li>
+            <li className="mb-2">Establish a powerful online presence</li>
+            <li className="mb-2">Enjoy 24x7 customer support</li>
           </ul>
-          <Button  text="Apply" url="/apply" />
+          <Button text="Apply Now" url="/apply" />
         </div>
       </div>
 
       {/* Advance Card */}
       <div className="w-full md:w-1/2 p-6 text-center mt-4 md:mt-0">
         <div className="bg-white rounded-lg p-6 shadow-md">
-          <h2 className="text-2xl font-bold mb-4">Advance Plan</h2>
-          <ul className="text-gray-600">
-            <li className="mb-2">Get you Business Website with various feature</li>
-            <li className="mb-2">You will get webite related to your business</li>
-            <li className="mb-2">Go your business online </li>
-            <li className="mb-2">24x7 customer care Service</li>
+          <h2 className="text-3xl font-bold mb-4 text-pink-800">Advanced Plan</h2>
+          <ul className="text-gray-700 mb-6">
+            <li className="mb-2">Get an advanced business website with powerful features</li>
+            <li className="mb-2">Customized to align perfectly with your business goals</li>
+            <li className="mb-2">Establish a dominant online presence</li>
+            <li className="mb-2">Benefit from 24x7 dedicated customer support</li>
           </ul>
-          {/* <button className="bg-blue-500 text-white px-4 py-2 mt-4 rounded hover:bg-blue-700 mx-auto block">Apply</button> */}
-          <Button  text="Apply" url="/apply" />
+          <Button text="Apply Now" url="/apply" />
         </div>
       </div>
     </div>
